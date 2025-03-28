@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- Header chứa nút đăng nhập, đăng ký, thêm món, đăng xuất -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#673AB7"
+            android:paddingHorizontal="20dp"
+            android:text="Đăng nhập"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đăng ký"
+            android:layout_marginStart="12dp"
+            android:backgroundTint="#9C27B0"
+            android:textColor="#FFFFFF"
+            android:paddingHorizontal="20dp" />
+
+        <Button
+            android:id="@+id/btnAddFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm món"
+            android:visibility="gone"
+            android:layout_marginStart="12dp"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:paddingHorizontal="20dp" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đăng xuất"
+            android:visibility="gone"
+            android:layout_marginStart="12dp"
+            android:backgroundTint="#F44336"
+            android:textColor="#FFFFFF"
+            android:paddingHorizontal="20dp" />
+    </LinearLayout>
+
+    <!-- Danh sách thực đơn -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMenu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="12dp" />
+</LinearLayout>
